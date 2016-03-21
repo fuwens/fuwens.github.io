@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>fuwen&#39;s Notes</title>
+  <subtitle>Keep Calm and Carry On</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://fuwens.github.io/"/>
+  <updated>2016-03-21T04:10:43.291Z</updated>
+  <id>http://fuwens.github.io/</id>
+  
+  <author>
+    <name>fuwen</name>
+    <email>fuwens@163.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React Native for Android Windows开发环境搭建</title>
+    <link href="http://fuwens.github.io/2016/03/18/React-Native-for-Android-Windows%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>http://fuwens.github.io/2016/03/18/React-Native-for-Android-Windows开发环境搭建/</id>
+    <published>2016-03-18T12:16:47.000Z</published>
+    <updated>2016-03-21T04:10:43.291Z</updated>
+    
+    <content type="html">&lt;p&gt;　今天尝试在window上搭建了一下react native for android的环境，中间有好多注意的点，记录下来方便以后快速搭建。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;安装Java-SDK&quot;&gt;&lt;a href=&quot;#安装Java-SDK&quot; class=&quot;headerlink&quot; title=&quot;安装Java SDK&quot;&gt;&lt;/a&gt;安装Java SDK&lt;/h2&gt;&lt;p&gt;andriod依赖java的开发环境，所以首先需要安装Java SDK，以及配置java环境变量。具体步骤这里就不再讲了，网上有很多教程。注意的点是根据你的系统选择x86还是x64版本。&lt;/p&gt;
+&lt;h2 id=&quot;安装Android-SDK&quot;&gt;&lt;a href=&quot;#安装Android-SDK&quot; class=&quot;headerlink&quot; title=&quot;安装Android SDK&quot;&gt;&lt;/a&gt;安装Android SDK&lt;/h2&gt;&lt;p&gt;这里可以单独安装Android SDK，也可以通过Eclipse ADT或者Android Studio一并安装。推荐使用Android Studio。大家可以从&lt;a href=&quot;http://androiddevtools.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AndroidDevTools&lt;/a&gt;下载。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我这里安装的Android Studio，选择的默认安装，所以Android SDK安装到了C:\User\yourname\AppData\Local\Android\sdk下面，接下来要配置环境变量，设置ANDROID_HOME指向SDK的目录，然后分别在PATH环境变量后面追加 %ANDROID_HOME%\tools和 %ANDROID_HOME%\platform-tools，注意这里的yourname是你的系统用户名。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;安装NodeJS&quot;&gt;&lt;a href=&quot;#安装NodeJS&quot; class=&quot;headerlink&quot; title=&quot;安装NodeJS&quot;&gt;&lt;/a&gt;安装NodeJS&lt;/h2&gt;&lt;p&gt;安装node4.1版本或者更高。我本地已经安装，略过。&lt;/p&gt;
+&lt;h2 id=&quot;安装react-native命令行工具&quot;&gt;&lt;a href=&quot;#安装react-native命令行工具&quot; class=&quot;headerlink&quot; title=&quot;安装react-native命令行工具&quot;&gt;&lt;/a&gt;安装react-native命令行工具&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install -g react-native-cli&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;创建项目&quot;&gt;&lt;a href=&quot;#创建项目&quot; class=&quot;headerlink&quot; title=&quot;创建项目&quot;&gt;&lt;/a&gt;创建项目&lt;/h2&gt;&lt;p&gt;进入工作目录，运行&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;react-native init MyProject&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;等待几分钟，待项目init完。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里推荐大家在windows安装Cygwin，Cygwin是一个在windows平台上运行的类UNIX模拟环境。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后进入node_modules\react-native\packager目录，运行&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;./packager.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;我是安装了Cygwin，所以这样运行packager.sh脚本。运行成功后，会监听8081端口。然后打开浏览器访问 &lt;a href=&quot;http://localhost:8081/index.android.bundle?platform=android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:8081/index.android.bundle?platform=android&lt;/a&gt;，此时可以看到打包后的脚本代码。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里也可以运行&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;react-native start&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;安装Genymotion模拟器&quot;&gt;&lt;a href=&quot;#安装Genymotion模拟器&quot; class=&quot;headerlink&quot; title=&quot;安装Genymotion模拟器&quot;&gt;&lt;/a&gt;安装Genymotion模拟器&lt;/h2&gt;&lt;p&gt;请到&lt;a href=&quot;https://www.genymotion.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Genymotion&lt;/a&gt;官方下载安装Genymotion模拟器，并创建Android emulator。请参考facebook的&lt;a href=&quot;https://facebook.github.io/react-native/docs/android-setup.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;说明&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&quot;启动&quot;&gt;&lt;a href=&quot;#启动&quot; class=&quot;headerlink&quot; title=&quot;启动&quot;&gt;&lt;/a&gt;启动&lt;/h2&gt;&lt;p&gt;安装Genymotion模拟器成功以后，重新打开一个Cygwin窗口，进入到项目android目录下运行&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;./gradlew.bat installDebug&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;执行./gradlew.bat installDebug时候，请先开启Genymotion模拟器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这一步是将安装包安装到模拟器中，一切正常的话，就可以看到如下画面。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;react-android.png&quot; class=&quot;img-topic&quot;&gt;&lt;/p&gt;
+&lt;p&gt;至此，window下React Native开发环境已经搭建完成，其他的正在学习和研究中。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　今天尝试在window上搭建了一下react native for android的环境，中间有好多注意的点，记录下来方便以后快速搭建。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;安装Java-SDK&quot;&gt;&lt;a href=&quot;#安装Java-SDK&quot; class=&quot;headerlin
+    
+    </summary>
+    
+      <category term="Android" scheme="http://fuwens.github.io/categories/Android/"/>
+    
+    
+      <category term="React" scheme="http://fuwens.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Welcome to my blog</title>
+    <link href="http://fuwens.github.io/2016/03/10/Welcome-to-my-blog/"/>
+    <id>http://fuwens.github.io/2016/03/10/Welcome-to-my-blog/</id>
+    <published>2016-03-10T02:29:48.000Z</published>
+    <updated>2016-03-11T03:48:35.764Z</updated>
+    
+    <content type="html">&lt;p&gt;　　欢迎来到我的blog。开篇博文，也不知道写些什么，放一首我最喜欢的歌，静静的听吧…&lt;/p&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=32785269&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt;
+</content>
+    
+    <summary type="html">
+    
+      欢迎来到我的blog。开篇博文，也不知道写些什么，放一首我最喜欢的歌，点进去静静的听吧...
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
