@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fuwens.github.io/"/>
-  <updated>2016-04-13T07:19:55.387Z</updated>
+  <updated>2016-04-13T07:23:31.167Z</updated>
   <id>http://fuwens.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>对象的类型判断和深拷贝</title>
+    <title>对象的类型检测和深拷贝</title>
     <link href="http://fuwens.github.io/2016/04/12/%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
     <id>http://fuwens.github.io/2016/04/12/对象的类型判断和深拷贝/</id>
-    <published>2016-04-12T08:33:37.000Z</published>
-    <updated>2016-04-13T07:19:55.387Z</updated>
+    <published>2016-04-12T09:33:37.000Z</published>
+    <updated>2016-04-13T07:23:31.167Z</updated>
     
     <content type="html">&lt;p&gt;　ECMAScript中有5种简单数据类型（也称作基本数据类型）:Undefined、Null、Boolean、Number和String。还有一种复杂数据类型（引用类型值）——Object，Object本质上是由一组无序的名值对组成。&lt;br&gt;　数据分为这两类，它们之间在复制克隆的时候存在一些差异。基本数据类型对象存储的是实际数据，而引用数据类型对象存储的是引用地址，而把数据的内容单独存放，因为引用数据类型对象比较庞大，这是数据开销和内存优化的手段。&lt;/p&gt;
 &lt;h3 id=&quot;1、typeof-amp-instanceof&quot;&gt;&lt;a href=&quot;#1、typeof-amp-instanceof&quot; class=&quot;headerlink&quot; title=&quot;1、typeof &amp;amp; instanceof&quot;&gt;&lt;/a&gt;1、typeof &amp;amp; instanceof&lt;/h3&gt;&lt;p&gt;typeof是一种操作符，用来检测给定变量的数据类型。&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;var message = &lt;span class=&quot;string&quot;&gt;&quot;some string&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;alert(typeof message)  //&lt;span class=&quot;string&quot;&gt;&#39;string&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -54,7 +54,7 @@
     <title>git命令整理学习</title>
     <link href="http://fuwens.github.io/2016/03/23/git%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86%E5%AD%A6%E4%B9%A0/"/>
     <id>http://fuwens.github.io/2016/03/23/git命令整理学习/</id>
-    <published>2016-03-23T10:23:32.000Z</published>
+    <published>2016-03-23T11:23:32.000Z</published>
     <updated>2016-03-23T11:08:31.147Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;gitlogo.png&quot; class=&quot;img-topic&quot;&gt;&lt;br&gt;　git是一个分布式的代码管理工具，适合分布式开发，强调个体。速度快、灵活。离线工作。任意两个开发者之间可以很容易的解决冲突。&lt;br&gt;　git分为工作区、暂存区、版本区，暂存区的作用：作为过渡层，避免误操作，保护工作区和版本区，处理分支。&lt;/p&gt;
@@ -113,7 +113,7 @@
     <title>React Native for Android Windows开发环境搭建</title>
     <link href="http://fuwens.github.io/2016/03/18/React-Native-for-Android-Windows%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>http://fuwens.github.io/2016/03/18/React-Native-for-Android-Windows开发环境搭建/</id>
-    <published>2016-03-18T12:16:47.000Z</published>
+    <published>2016-03-18T13:16:47.000Z</published>
     <updated>2016-03-21T04:10:43.291Z</updated>
     
     <content type="html">&lt;p&gt;　今天尝试在window上搭建了一下react native for android的环境，中间有好多注意的点，记录下来方便以后快速搭建。&lt;/p&gt;
@@ -164,7 +164,7 @@
     <title>Welcome to my blog</title>
     <link href="http://fuwens.github.io/2016/03/10/Welcome-to-my-blog/"/>
     <id>http://fuwens.github.io/2016/03/10/Welcome-to-my-blog/</id>
-    <published>2016-03-10T02:29:48.000Z</published>
+    <published>2016-03-10T03:29:48.000Z</published>
     <updated>2016-03-11T03:48:35.764Z</updated>
     
     <content type="html">&lt;p&gt;　　欢迎来到我的blog。开篇博文，也不知道写些什么，放一首我最喜欢的歌，静静的听吧…&lt;/p&gt;
